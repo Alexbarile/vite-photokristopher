@@ -58,7 +58,7 @@ export default{
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center">
                 <nav>
                     <ul class="pagination">
                         <li :class="currentPage === 1 ? 'disabled' : 'page-item'">
