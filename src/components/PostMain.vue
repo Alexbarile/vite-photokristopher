@@ -9,7 +9,17 @@ export default{
             loading: true,
             baseUrl: 'http://127.0.0.1:8000/', 
         }
-    }
+    },
+    methods: {
+        getPosts(){
+            this.loading = true;
+            axios.get(`${this.baseUrl}/api/posts`).then(response) => {
+                 if(response.data.success){
+                    this.posts = response.data.results 
+                 }
+            }
+        }
+    },
 }
 
 </script>
