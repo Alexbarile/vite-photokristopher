@@ -9,7 +9,7 @@ export default{
             posts: [],
             loading: true,
             baseUrl: 'http://127.0.0.1:8000',
-            
+
             // per il PAGINATE
             lastPage: null,
             currentPage: 1,
@@ -27,7 +27,7 @@ export default{
                     // this.posts = response.data.posts
 
                     // con PAGINATE
-                    this.posts = response.data.posts.data
+                    this.posts = response.data.posts.data;
                     this.currentPage = response.data.posts.current_page;
                     this.lastPage = response.data.posts.last_page;
                     this.loading = false
