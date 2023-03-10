@@ -1,5 +1,5 @@
 <script>
-import {store} from '../store.js'
+import {store} from '../store'
 
 export default{
     name: "PostCard",
@@ -33,7 +33,7 @@ export default{
                 <p>
                     <em>
                         <strong>Technologies</strong>:
-                        <span class="badge bg-primary m-2" v-for="technology in post.technologies">
+                        <span class="badge bg-primary m-2" v-for="technology in post.technologies" :key="technology.id">
                             {{technology.name}}
                         </span>
                     </em>

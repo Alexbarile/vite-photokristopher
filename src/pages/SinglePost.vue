@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
+
 export default {
     name: "SinglePost",
     data() {
@@ -29,9 +30,9 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col d-flex justify-content-center align-items-center align" v-if="store.loading">
-                <div class="spinner-border" role="status"></div>
+                <div class="lds-dual-ring"></div>
             </div>
-            <div class="col" v-else>
+            <div v-else class="col">
                 <div class="d-flex justify-content-end m-4">
                     <router-link class="btn btn-sm btn-success" :to="{ name: 'post_list'}">Torna ai Post</router-link>
                 </div>
@@ -57,7 +58,7 @@ export default {
                     <p v-if="post.technologies.length > 0">
                         <em>
                             <strong>Technologies</strong>:
-                            <span class="badge bg-primary m-2" v-for="technology in post.technologies">
+                            <span class="badge bg-primary m-2" v-for="technology in post.technologies" :key="technology.id">
                                 {{technology.name}}
                             </span>
                         </em>
@@ -81,4 +82,30 @@ export default {
    .cover-img{
     width: 200px;
    }
+
+   .lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 </style>

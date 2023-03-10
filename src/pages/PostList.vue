@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import { store } from '../store';
 import PostCard from '../components/PostCard.vue';
 
 export default{
@@ -52,11 +53,11 @@ export default{
                 <h2 class="text-center">BoolPress</h2>
             </div>
         </div>
-        <div v-if="loading" class="col-12 d-flex justify-content-center">
-            <div class="loader">
+        <!-- <div v-if="loading" class="col-12 d-flex justify-content-center">
+            <div class="lds-dual-ring">
             </div>
-        </div>
-        <div v-else class="col-12 d-flex justify-content-center flex-wrap">
+        </div> -->
+        <div class="col-12 d-flex justify-content-center flex-wrap">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4" v-for="post in posts" :key="post.id">
                     <PostCard :post="post"></PostCard>
@@ -70,7 +71,7 @@ export default{
                         <li :class="currentPage === 1 ? 'disabled' : 'page-item'">
                             <button class="page-link" @click="getPosts(currentPage - 1)">Prev</button>
                         </li>
-                        <li :class="currentPage === i ? 'disabled' : 'page-item'" v-for="item in lastPage">
+                        <li :class="currentPage === i ? 'disabled' : 'page-item'" v-for="item in lastPage" :key="item.id">
                             <button class="page-link" @click="getPosts(item)">{{item}}</button>
                         </li>
                         <li :class="currentPage === lastPage ? 'disabled' : 'page-item'">
@@ -85,5 +86,30 @@ export default{
 
 <style lang="scss">
 @use '../styles/app.scss' as *;
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 </style>
