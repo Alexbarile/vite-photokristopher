@@ -18,7 +18,12 @@ export default{
             <div class="card-title p-1">
                 <h5>{{ post.title }}</h5>
                 <p>
-                    <em><strong>Categoria</strong>: {{post.type.name}}</em>
+                    <em v-if="post.type">
+                        <strong>Categoria</strong>: {{post.type.name}}
+                    </em>
+                    <em v-else>
+                        Nessuna Categoria
+                    </em>
                 </p>
                 <p>
                     <em>
@@ -28,6 +33,9 @@ export default{
                         </span>
                     </em>
                 </p>
+                <a href="#" class="btn btn-warning">
+                    Leggi l'articolo
+                </a>
             </div>
         </div>
     </div>
