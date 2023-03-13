@@ -1,5 +1,6 @@
-<script>
+<!-- <script>
 import axios from 'axios';
+import {store} from '../store';
 
 export default {
     name: 'Contacts',
@@ -10,6 +11,8 @@ export default {
             email: '',
             phone: '',
             message: '',
+            store,
+            errors: null,
         }
     },
     methods: {
@@ -20,7 +23,22 @@ export default {
                 email: this.email,
                 phone: this.phone,
                 message: this.message,
+                success: false,
             }
+
+            axios.post(`${this.store.baseUrl}/api/contacts`, data).then((response) => {
+                if(!response.data.success){
+                    this.errors = response.data.errors
+                }
+                else{
+                    this.name = ''
+                    this.surname = ''
+                    this.email = ''
+                    this.phone = ''
+                    this.message = ''
+                    this.success = true
+                }
+            })
         }
     },
 }
@@ -79,4 +97,4 @@ export default {
 
 <style lang="scss">
     
-</style>
+</style> -->

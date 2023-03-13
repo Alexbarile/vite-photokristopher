@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage.vue';
 import PostList from './pages/PostList.vue';
 import SinglePost from './pages/SinglePost.vue';
 import NotFound from './pages/NotFound.vue';
-import Contacts from './pages/Contacts.vue';
+// import Contacts from './pages/Contacts.vue';
 
 //creiamo l'oggetto router
 const router = createRouter({
@@ -30,11 +30,11 @@ const router = createRouter({
             name: 'single-post',
             component: SinglePost
         },
-        {
-            path: '/contatti',
-            name: 'contacts',
-            component: Contacts
-        },
+        // {
+        //     path: '/contatti',
+        //     name: 'contacts',
+        //     component: Contacts
+        // },
 
         //rotta per errore 404 (sempre per ultima)
         {
