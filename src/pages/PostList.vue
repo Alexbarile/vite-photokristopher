@@ -54,8 +54,7 @@ export default{
             </div>
         </div>
         <!-- <div v-if="loading" class="col-12 d-flex justify-content-center">
-            <div class="lds-dual-ring">
-            </div>
+            <div class="lds-dual-ring"></div>
         </div> -->
         <div class="col-12 d-flex justify-content-center flex-wrap">
             <div class="row">

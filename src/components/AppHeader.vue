@@ -12,10 +12,10 @@ export default{
                     label: 'Blog',
                     routeName: 'post_list',
                 },
-                // {
-                //     label: 'Contatti',
-                //     routeName: 'contacts',
-                // },
+                {
+                    label: 'Contatti',
+                    routeName: 'contacts',
+                },
                 // {
                 //     label: 'Categorie',
                 //     routeName: 'categories_list',
