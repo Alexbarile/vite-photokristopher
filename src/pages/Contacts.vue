@@ -27,7 +27,10 @@ export default {
                 message: this.message,
             }
 
+            // per non far rinviare l'email all'utente
             this.loading = true;
+
+            // per far togliere gli errori della compilazine del form
             this.errors = {};
 
             axios.post(`${this.store.baseUrl}/api/contacts`, data).then((response) => {
