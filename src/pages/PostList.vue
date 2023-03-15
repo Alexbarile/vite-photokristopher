@@ -31,7 +31,7 @@ export default{
                     this.posts = response.data.posts.data;
                     this.currentPage = response.data.posts.current_page;
                     this.lastPage = response.data.posts.last_page;
-                    this.store.loading = false
+                    this.loading = false
                 }
                 else {
                     alert('Non completo')
@@ -53,10 +53,10 @@ export default{
                 <h2 class="text-center">BoolPress</h2>
             </div>
         </div>
-        <!-- <div v-if="loading" class="col-12 d-flex justify-content-center">
+        <div v-if="loading" class="col-12 d-flex justify-content-center">
             <div class="lds-dual-ring"></div>
-        </div> -->
-        <div class="col-12 d-flex justify-content-center flex-wrap">
+        </div>
+        <div v-else class="col-12 d-flex justify-content-center flex-wrap">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4" v-for="post in posts" :key="post.id">
                     <PostCard :post="post"></PostCard>

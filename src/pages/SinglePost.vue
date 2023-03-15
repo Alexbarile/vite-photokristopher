@@ -11,6 +11,9 @@ export default {
             loading: store.loading,
         }
     },
+    beforeMount(){
+        this.loading = true;
+    },
     mounted() {
         // this.loading = true;
         axios.get(`${this.baseUrl}/api/posts/${this.$route.params.slug}`).then((response) => {
