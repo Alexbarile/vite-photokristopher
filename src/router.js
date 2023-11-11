@@ -2,7 +2,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 //importare le componenti delle pagine
-import HomePage from './pages/HomePage.vue';
+import Home from './pages/Home.vue';
+import Portfolio from './pages/Portfolio.vue';
+import Aboutme from './pages/Aboutme.vue';
 import PostList from './pages/PostList.vue';
 import SinglePost from './pages/SinglePost.vue';
 import NotFound from './pages/NotFound.vue';
@@ -15,8 +17,18 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            name: 'homepage',
-            component: HomePage
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/portfolio',
+            name: 'portfolio',
+            component: Portfolio
+        },
+        {
+            path: '/aboutme',
+            name: 'about_me',
+            component: Aboutme
         },
         {
             path: '/blog',

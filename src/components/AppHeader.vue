@@ -5,21 +5,25 @@ export default{
         return {
             menuItems: [
                 {
-                    label: 'Homepage',
-                    routeName: 'homepage',
+                    label: 'Home',
+                    routeName: 'home',
+                },
+                {
+                    label: 'Portfolio',
+                    routeName: 'portfolio',
+                },
+                {
+                    label: 'About me',
+                    routeName: 'about_me',
                 },
                 {
                     label: 'Blog',
                     routeName: 'post_list',
                 },
                 {
-                    label: 'Contatti',
+                    label: 'Contact',
                     routeName: 'contacts',
                 },
-                // {
-                //     label: 'Categorie',
-                //     routeName: 'categories_list',
-                // },
             ]
         }
     },
@@ -28,28 +32,65 @@ export default{
 
 <template>
     <header>
-        <nav class="navbar navbar-expand-md background-nav">
             <div class="container">
-                <div class="navbar-brand">
-                    <img src="" class="logo">
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item" v-for="(item, index) in menuItems" :key="index">
-                            <router-link :to="{name: item.routeName}" class="nav-link text-white">
-                                {{ item.label }}
-                            </router-link>
-                        </li>
-                    </ul>
-                </div>
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <router-link :to="{name: 'home'}" class="logo">
+                            <h1>Wander with Kri</h1>
+                        </router-link>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <nav>
+                            <ul>
+                                <li v-for="(item, index) in menuItems" :key="index">
+                                    <router-link :to="{name: item.routeName}" class="list-item">
+                                        {{ item.label }}
+                                    </router-link>
+                                </li>
+                            </ul>
+                        </nav>    
+                    </div>
+                </div>  
             </div>
-        </nav>
     </header>
 </template>
 
 <style lang="scss" scoped>
-    .background-nav{
-        background-color: rgb(181, 181, 252);
+@use '../styles/app.scss' as *;
+    header{
+    
+
+        .row{
+            padding: 10px;
+            .col{
+
+                .logo{
+                    text-decoration: none;
+                    color: black;
+                    h1{
+                        font-size: 25px;
+                        margin: 0 !important;
+                    }
+                }
+
+                ul{
+                    display: flex;
+                    list-style-type: none;
+                    margin: 0 !important;
+
+                    li{
+                        padding: 20px;
+                        .list-item{
+                            text-decoration: none;
+                            color: black;
+                            &:hover{
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 </style>
