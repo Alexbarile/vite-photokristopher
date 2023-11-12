@@ -11,7 +11,7 @@ export default{
             <div class="row">
                 <div class="col d-flex justify-content-center flex-column align-items-center">
                     <div class="py-4">
-                        <a href="">
+                        <a href="https://www.instagram.com/wanderwithkri/" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>

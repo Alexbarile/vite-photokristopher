@@ -4,96 +4,115 @@ import {store} from '../store';
 
 export default {
     name: 'Contacts',
-    data() {
-        return {
-            name: '',
-            surname: '',
-            email: '',
-            phone: '',
-            message: '',
-            store,
-            errors: {},
-            success: false,
-            loading: false,
-        }
-    },
-    methods: {
-        sendForm(){
-            const data = {
-                name: this.name,
-                surname: this.surname,
-                email: this.email,
-                phone: this.phone,
-                message: this.message,
-            }
+    // data() {
+    //     return {
+    //         name: '',
+    //         surname: '',
+    //         email: '',
+    //         phone: '',
+    //         message: '',
+    //         store,
+    //         errors: {},
+    //         success: false,
+    //         loading: false,
+    //     }
+    // },
+    // methods: {
+    //     sendForm(){
+    //         const data = {
+    //             name: this.name,
+    //             surname: this.surname,
+    //             email: this.email,
+    //             phone: this.phone,
+    //             message: this.message,
+    //         }
 
-            // per non far rinviare l'email all'utente
-            this.loading = true;
+    //         per non far rinviare l'email all'utente
+    //         this.loading = true;
 
-            // per far togliere gli errori della compilazine del form
-            this.errors = {};
+    //         per far togliere gli errori della compilazine del form
+    //         this.errors = {};
 
-            axios.post(`${this.store.baseUrl}/api/contacts`, data).then((response) => {
-                if(!response.data.success){
-                    this.errors = response.data.errors
-                    this.loading = false;
-                }
-                else{
-                    this.name = ''
-                    this.surname = ''
-                    this.email = ''
-                    this.phone = ''
-                    this.message = ''
-                    this.success = true
-                    this.loading = false
+    //         axios.post(`${this.store.baseUrl}/api/contacts`, data).then((response) => {
+    //             if(!response.data.success){
+    //                 this.errors = response.data.errors
+    //                 this.loading = false;
+    //             }
+    //             else{
+    //                 this.name = ''
+    //                 this.surname = ''
+    //                 this.email = ''
+    //                 this.phone = ''
+    //                 this.message = ''
+    //                 this.success = true
+    //                 this.loading = false
 
-                    setTimeout(() => {
-                        this.$router.push({'name' : 'thank-you'})
-                    }, 5000);
-                }
-            })
-        }
-    },
+    //                 setTimeout(() => {
+    //                     this.$router.push({'name' : 'thank-you'})
+    //                 }, 5000);
+    //             }
+    //         })
+    //     }
+    // },
 }
 </script>
 
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h2 class="text-center">Contatti</h2>
+            <div class="col-6">
+                <div class="hero-contact">
+                    <img src="../../public/img/aboutme.JPG" alt="Foto About Me">
+                </div>
             </div>
-            <div class="col-12">
-                <h4 class="text-center">Informazioni contatto</h4>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="text-center d-flex flex-column">
-                            <div>
-                                <strong><i class="fas fa-map me-2">Indirizzo:</i></strong>
-                                Via, Numero, Città, CAP
-                            </div>
-                            <div>
-                                <strong><i class="fas fa-book me-2">Partita Iva:</i></strong>
-                                123456789
-                            </div>
+            <div class="col-6">
+                <div class="copy">
+
+                    <!-- FORM -->
+
+                    <form class="form">
+                        <label>
+                            <input required placeholder="" type="text" class="input">
+                            <span>Nome</span>
+                        </label>
+
+                        <label>
+                            <input required placeholder="" type="text" class="input">
+                            <span>Cognome</span>
+                        </label>
+                                
+                        <label>
+                            <input required placeholder="" type="number" class="input">
+                            <span>Telefono</span>
+                        </label> 
+                            
+                        <label>
+                            <textarea required placeholder="" type="textarea" class="input"></textarea>
+                            <span>Messaggio</span>
+                        </label>
+                        <button class="submit">Invia</button>
+                    </form>
+
+                    <!-- CONTACT -->
+
+                    <div class="contact">
+                        <h4 class="text-center">Informazioni contatto</h4>
+                        <div class="pb-1">
+                            <i class="fa-regular fa-envelope pe-3"></i>
+                            <a target="_blank" href="mailto:kristinaprilipko7@gmail.it">kristinaprilipko7@gmail.it</a>
                         </div>
-                    </div>
-                    
-                    <div class="col-12">
-                        <div class="text-center">
-                            <div>
-                                <strong><i class="fas fa-phone me-2">Telefono:</i></strong>
-                                0123456789
-                            </div>
-                            <div>
-                                <strong><i class="fas fa-envelope me-2">Email:</i></strong>
-                                hello@example.com
-                            </div>
+                        <div>
+                            <i class="fa-brands fa-whatsapp pe-3"></i>
+                            <a target="_blank" href="tel:+393884385291">+39 3884385291</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
+
+
+            <!-- FORM -->
+
+            <!-- <div class="col-12">
                 <h4 class="text-center">Scrivici</h4>
                 <form @submit.prevent="sendForm">
                     <div class="row">
@@ -139,16 +158,120 @@ export default {
                         </div>
                     </div>
                 </form>
-
-            </div>
+            </div> -->
         </div>
-    </div>
-    <div class="container-fluid">
-        <h3 class="text-center">GOOGLE MAPS</h3>
     </div>
 </template>
 
 
 <style lang="scss" scoped>
+@use '../styles/app.scss' as *;
+
+.row{
+    .col-6{
+        padding: 0px !important;
+        background-color: rgb(189, 189, 255);
+        
+        .hero-contact{
+            img{
+                width: 100%;
+            }
+        }
+
+        .copy{
+            padding: 150px 120px;
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+                border-radius: 20px;
+                position: relative;
+            }
+            .form label {
+                position: relative;
+            }
+    
+            .form label .input {
+                width: 100%;
+                padding: 10px 10px 20px 10px;
+                outline: 0;
+                border: 1px solid rgba(105, 105, 105, 0.397);
+                border-radius: 10px;
+            }
+    
+            .form label .input + span {
+                position: absolute;
+                left: 10px;
+                top: 15px;
+                color: grey;
+                font-size: 0.9em;
+                cursor: text;
+                transition: 0.3s ease;
+            }
+    
+            .form label .input:placeholder-shown + span {
+                top: 15px;
+                font-size: 0.9em;
+            }
+    
+            .form label .input:focus + span,.form label .input:valid + span {
+                top: 30px;
+                font-size: 0.7em;
+                font-weight: 600;
+            }
+    
+            .form label .input:valid + span {
+                color: green;
+            }
+    
+            .submit {
+                border: none;
+                outline: none;
+                background-color: royalblue;
+                padding: 10px;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 16px;
+                transform: .3s ease;
+            }
+    
+            .submit:hover {
+                background-color: rgb(56, 90, 194);
+            }
+    
+            @keyframes pulse {
+                from {
+                    transform: scale(0.9);
+                    opacity: 1;
+                }
+    
+                to {
+                    transform: scale(1.8);
+                    opacity: 0;
+                }
+            }
+
+            .contact{
+                padding: 60px 30px;
+
+                i{
+                    font-size: 25px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover{
+                        color: gray;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
     
 </style>
