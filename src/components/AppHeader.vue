@@ -17,12 +17,34 @@ export default{
                     routeName: 'about_me',
                 },
                 {
-                    label: 'Blog',
-                    routeName: 'post_list',
-                },
-                {
                     label: 'Contact',
                     routeName: 'contacts',
+                },
+            ],
+            menuCategory: [
+                {
+                    label: 'People',
+                    routeName: 'people',
+                },
+                {
+                    label: 'Hospitality',
+                    routeName: 'hospitality',
+                },
+                {
+                    label: 'Wedding',
+                    routeName: 'wedding',
+                },
+                {
+                    label: 'Commercial',
+                    routeName: 'commercial',
+                },
+                {
+                    label: 'Events',
+                    routeName: 'events',
+                },
+                {
+                    label: 'Street',
+                    routeName: 'street',
                 },
             ]
         }
@@ -46,6 +68,13 @@ export default{
                                     <router-link :to="{name: item.routeName}" class="list-item">
                                         {{ item.label }}
                                     </router-link>
+                                </li>
+                                <li class="d-none" v-for="(item, index) in menuCategory" :key="index">
+                                    <router-link :to="{name: item.routeName}" class="list-item">
+                                        {{ item.label }}
+                                    </router-link>
+
+                                    
                                 </li>
                             </ul>
                         </nav>    

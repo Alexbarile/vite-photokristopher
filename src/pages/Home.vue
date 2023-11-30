@@ -11,7 +11,7 @@
                 <div class="col-12">
                     <div class="hero-image">
                         <div class="hero-text">
-                            <h3 class="pb-4">Photography</h3>
+                            <h4 class="pb-4">Photography</h4>
                             <router-link :to="{name: 'portfolio'}" class="logo">
                                 <button>SEE</button>
                             </router-link>
@@ -48,7 +48,7 @@ main{
             transform: translate(-50%, -50%);
             color: white;
     
-            h3{
+            h4{
                 text-transform: uppercase;
                 font-size: 20px;
                 font-weight: 400;

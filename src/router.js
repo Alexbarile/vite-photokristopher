@@ -5,11 +5,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from './pages/Home.vue';
 import Portfolio from './pages/Portfolio.vue';
 import Aboutme from './pages/Aboutme.vue';
-import PostList from './pages/PostList.vue';
-import SinglePost from './pages/SinglePost.vue';
-import NotFound from './pages/NotFound.vue';
 import Contacts from './pages/Contacts.vue';
+import People from './pages/People.vue';
+import Hospitality from './pages/Hospitality.vue';
+import Wedding from './pages/Wedding.vue';
+import Commercial from './pages/Commercial.vue';
+import Events from './pages/Events.vue';
+import Street from './pages/Street.vue';
 import ThankYou from './pages/ThankYou.vue';
+import NotFound from './pages/NotFound.vue';
 
 //creiamo l'oggetto router
 const router = createRouter({
@@ -31,22 +35,39 @@ const router = createRouter({
             component: Aboutme
         },
         {
-            path: '/blog',
-            name: 'post_list',
-            component: PostList
-        },
-
-        //rotta per il dettaglio del post
-        {
-            //con :nome_parametro andiamo a passare il parametro per visualizzare il dettaglio di un articolo, il nome_parametro uguale a quello dato in api.php di laraver
-            path: '/blog/:slug',
-            name: 'single-post',
-            component: SinglePost
-        },
-        {
-            path: '/contatti',
+            path: '/contacts',
             name: 'contacts',
             component: Contacts
+        },
+        {
+            path: '/people',
+            name: 'people',
+            component: People
+        },
+        {
+            path: '/hospitality_industry',
+            name: 'hospitality',
+            component: Hospitality
+        },
+        {
+            path: '/wedding',
+            name: 'wedding',
+            component: Wedding
+        },
+        {
+            path: '/commercial',
+            name: 'commercial',
+            component: Commercial
+        },
+        {
+            path: '/events',
+            name: 'events',
+            component: Events
+        },
+        {
+            path: '/street_photography',
+            name: 'street',
+            component: Street
         },
         {
             path: '/thank-you',
