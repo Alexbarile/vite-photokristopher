@@ -140,6 +140,14 @@ img {
 }
 .grid-wrapper .tall {
 	grid-row: span 2;
+    transition: 1s;
+}
+
+// HOVER FILTRO COLORE, INGRADIMENTO FOTO, BOX SHADOW
+.grid-wrapper .tall:hover {
+    filter: grayscale(100%);
+    scale: 1.1;
+    box-shadow: 0 0 6px 3px rgb(215, 215, 123);
 }
 .grid-wrapper .big {
 	grid-column: span 2;
