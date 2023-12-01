@@ -199,7 +199,7 @@ export default {
                 border: 1px solid rgba(105, 105, 105, 0.397);
                 border-radius: 10px;
             }
-    
+            
             .form label .input + span {
                 position: absolute;
                 left: 10px;
@@ -268,8 +268,6 @@ export default {
                     }
                 }
             }
-
-
         }
     }
 }

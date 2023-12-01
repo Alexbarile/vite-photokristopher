@@ -9,7 +9,7 @@ export default {
         <div class="row">
             <div class="col text-center">
                 <h2>Grazie per averci contattato</h2>
-                <router-link :to="{name: 'post_list'}" class="btn btn-primary">
+                <router-link :to="{name: 'portfolio'}" class="btn btn-primary">
                     Torna ai Post
                 </router-link>
             </div>
