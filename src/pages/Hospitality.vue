@@ -1,6 +1,28 @@
 <script>
 export default {
-    name: 'Hospitality'
+    name: 'Hospitality',
+    data() {
+        return {
+            images: [
+                { url: 'aboutme.JPG' },
+                { url: 'hero.JPG' },
+                { url: 'aboutme.JPG' },
+                
+            ],
+        };
+    },
+    methods: {
+
+        getImagePath: function (img) {
+            return `/img/${img}`
+        },
+
+        openModal(index) {
+        // Apre la modale corrispondente all'immagine cliccata
+        const modalId = 'exampleModal' + index;
+        new bootstrap.Modal(document.getElementById(modalId)).show();
+        },
+    },
 }
 </script>
 
@@ -9,6 +31,29 @@ export default {
         <div class="row">
             <div class="col">
                 <div class="grid-wrapper">
+                    <!-- Lista di immagini con modali dinamiche -->
+                    <div v-for="(image, index) in images" :key="index">
+                        <div class="square" @click="openModal(index)">
+                            <img :src="getImagePath(image.url)" alt="Immagine" />
+                        </div>
+
+                        <!-- Modale dinamica -->
+                        <div :id="'exampleModal' + index" class="modal fade" :aria-labelledby="'exampleModalLabel' + index" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <img :src="getImagePath(image.url)" alt="Immagine" />
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+
+
+
+
+
+
                     <div class="square">
                         <img src="https://images.unsplash.com/photo-1541845157-a6d2d100c931?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
                     </div>
@@ -116,11 +161,11 @@ img {
 
 /* Main CSS */
 
-.grid-wrapper > div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+// .grid-wrapper > div {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
 .grid-wrapper > div > img {
 	width: 100%;
 	height: 100%;

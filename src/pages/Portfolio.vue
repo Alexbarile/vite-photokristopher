@@ -6,32 +6,32 @@ export default{
         return {
             menuItems: [
                 {
-                    image: 'aboutme.JPG',
+                    image: 'DSCF9269.JPG',
                     category: 'People',
                     routeName: 'people',
                 },
                 {
-                    image: 'aboutme.JPG',
+                    image: 'DSCF8452.JPG',
                     category: 'Hospitality Industry',
                     routeName: 'hospitality',
                 },
                 {
-                    image: 'aboutme.JPG',
+                    image: 'DSCF1155.jpg',
                     category: 'Wedding',
                     routeName: 'wedding',
                 },
                 {
-                    image: 'aboutme.JPG',
+                    image: 'DSCF9076.JPG',
                     category: 'Commercial',
                     routeName: 'commercial',
                 },
                 {
-                    image: 'aboutme.JPG',
+                    image: 'FUJIFILM_X-T30_4160x6240_053824.jpg',
                     category: 'Events',
                     routeName: 'events',
                 },
                 {
-                    image: 'aboutme.JPG',
+                    image: 'FUJIFILM_X-T30_4160x6240_052958.jpg',
                     category: 'Street Photography',
                     routeName: 'street',
                 },
@@ -40,7 +40,7 @@ export default{
     },
     methods: {
         getImagePath: function (img) {
-            return `/img/${img}`
+            return `/img/portfolio/${img}`
         }
     },
     
