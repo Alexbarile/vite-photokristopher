@@ -52,15 +52,17 @@ export default{
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2 class="text-center">Portfolio</h2>
-                </div>
-            </div>
-            <div class="row">
 
                 <!-- CARD V-FOR -->
 
                 <div v-for="(item, index) in menuItems" :key="index" class="col-4 p-1">
+
+                    <!-- click su tutta l'immagine -->
+
+                    <!-- <router-link :to="{name: item.routeName}">
+                        
+                    </router-link> -->
+                    
                     <div class="hero-image" :style="{ backgroundImage: 'url(' + getImagePath(item.image) + ')' }">
                         <div class="hero-text">
                             <h3 class="pb-3">{{item.category}}</h3>
@@ -70,72 +72,6 @@ export default{
                         </div>
                     </div>
                 </div>
-
-                <!-- CARD ALL -->
-
-                <!-- <div class="col-4 p-0">
-                    <div class="hero-image">
-                        <div class="hero-text">
-                            <h3 class="pb-3">People</h3>
-                            <router-link :to="{name: 'portfolio'}">
-                                <button>Look</button>
-                            </router-link>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 px-2">
-                    <div class="hero-image">
-                        <div class="hero-text">
-                            <h3 class="pb-3">Hospitality Industry</h3>
-                            <router-link :to="{name: 'portfolio'}">
-                                <button>Look</button>
-                            </router-link>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 p-0">
-                    <div class="hero-image">
-                        <div class="hero-text">
-                            <h3 class="pb-3">Wedding</h3>
-                            <router-link :to="{name: 'portfolio'}">
-                                <button>Look</button>
-                            </router-link>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="row py-2">
-                <div class="col-4 p-0">
-                    <div class="hero-image">
-                        <div class="hero-text">
-                            <h3 class="pb-3">Commercial</h3>
-                            <router-link :to="{name: 'portfolio'}">
-                                <button>Look</button>
-                            </router-link>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 px-2">
-                    <div class="hero-image">
-                        <div class="hero-text">
-                            <h3 class="pb-3">Events</h3>
-                            <router-link :to="{name: 'portfolio'}">
-                                <button>Look</button>
-                            </router-link>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4 p-0">
-                    <div class="hero-image">
-                        <div class="hero-text">
-                            <h3 class="pb-3">Street Photography</h3>
-                            <router-link :to="{name: 'portfolio'}">
-                                <button>Look</button>
-                            </router-link>
-                        </div>
-                    </div>
-                </div>   -->
             </div>
         </div>
     </section>
@@ -153,6 +89,12 @@ export default{
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        transform: scale(1);
+        transition: all 0.5s;
+
+        &:hover{
+            transform: scale(1.02);
+        }
     }
 
     .hero-text{

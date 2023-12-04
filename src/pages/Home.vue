@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="hero-image">
+                    <div class="hero-img">
                         <div class="hero-text">
                             <h4 class="pb-4">Photography</h4>
                             <router-link :to="{name: 'portfolio'}" class="logo">
@@ -30,7 +30,7 @@ main{
 
     .row{
 
-        .hero-image{
+        .hero-img{
             background-image: url("../../public/img/hero.JPG");
             background-color: #cccccc;
             height: 1000px;
