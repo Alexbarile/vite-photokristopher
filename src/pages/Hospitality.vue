@@ -32,12 +32,12 @@ export default {
             <div class="col">
                 <div class="grid-wrapper">
                     <!-- Lista di immagini con modali dinamiche -->
-                    <div v-for="(image, index) in images" :key="index">
+                    <!-- <div v-for="(image, index) in images" :key="index">
                         <div class="square" @click="openModal(index)">
                             <img :src="getImagePath(image.url)" alt="Immagine" />
                         </div>
 
-                        <!-- Modale dinamica -->
+                        
                         <div :id="'exampleModal' + index" class="modal fade" :aria-labelledby="'exampleModalLabel' + index" tabindex="-1" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
@@ -45,7 +45,7 @@ export default {
                             </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                    
 
@@ -200,7 +200,7 @@ img {
 
 .grid-wrapper .tall:hover, .big:hover, .wide:hover, .square:hover {
     filter: grayscale(100%);
-    scale: 1.1;
+    scale: 2;
     box-shadow: 0 0 6px 3px rgb(215, 215, 123);
 }
 
