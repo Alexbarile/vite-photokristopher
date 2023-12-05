@@ -27,10 +27,10 @@ export default {
     //             message: this.message,
     //         }
 
-    //         per non far rinviare l'email all'utente
+    //         // per non far rinviare l'email all'utente
     //         this.loading = true;
 
-    //         per far togliere gli errori della compilazine del form
+    //         // per far togliere gli errori della compilazine del form
     //         this.errors = {};
 
     //         axios.post(`${this.store.baseUrl}/api/contacts`, data).then((response) => {
@@ -62,7 +62,7 @@ export default {
         <div class="row">
             <div class="col-6">
                 <div class="hero-contact">
-                    <img src="../../public/img/aboutme.JPG" alt="Foto About Me">
+                    <!-- <img src="../../public/img/aboutme.JPG" alt="Foto About Me"> -->
                 </div>
             </div>
             <div class="col-6">
@@ -71,6 +71,10 @@ export default {
                     <!-- FORM -->
 
                     <form class="form">
+                        <label>
+                            <input required placeholder="" type="text" class="w-100">
+                            <span>Nome</span>
+                        </label>
                         <label>
                             <input required placeholder="" type="text" class="input">
                             <span>Nome</span>
@@ -90,7 +94,11 @@ export default {
                             <textarea required placeholder="" type="textarea" class="input"></textarea>
                             <span>Messaggio</span>
                         </label>
-                        <button class="submit">Invia</button>
+                        <router-link :to="{name: 'thank-you'}" class="text-center">
+                            <button class="submit">
+                                Invia
+                            </button>
+                        </router-link>
                     </form>
 
                     <!-- CONTACT -->
@@ -193,11 +201,16 @@ export default {
             }
     
             .form label .input {
-                width: 100%;
-                padding: 10px 10px 20px 10px;
-                outline: 0;
-                border: 1px solid rgba(105, 105, 105, 0.397);
-                border-radius: 10px;
+                // width: 100%;
+                // padding: 10px 10px 20px 10px;
+                // outline: 0;
+                // border: 1px solid rgba(105, 105, 105, 0.397);
+                // border-radius: 10px;
+
+                border: 1px solid white;
+                background-color: transparent;
+                padding: 11px 70px;
+                color: white;
             }
             
             .form label .input + span {
@@ -226,14 +239,19 @@ export default {
             }
     
             .submit {
-                border: none;
-                outline: none;
-                background-color: royalblue;
-                padding: 10px;
-                border-radius: 10px;
-                color: #fff;
-                font-size: 16px;
-                transform: .3s ease;
+                // border: none;
+                // outline: none;
+                // background-color: royalblue;
+                // padding: 10px 50px 10px 50px;
+                // border-radius: 10px;
+                // color: #fff;
+                // font-size: 16px;
+                // transform: .3s ease;
+
+                border: 1px solid white;
+                background-color: transparent;
+                padding: 11px 70px;
+                color: white;
             }
     
             .submit:hover {
