@@ -118,7 +118,4 @@ img {
     box-shadow: 0 0 6px 3px rgb(239, 239, 211);
 }
 
- 
-
-    
 </style>
