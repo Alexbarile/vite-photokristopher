@@ -111,6 +111,8 @@ export default{
                             text-decoration: none;
                             color: black;
                             white-space: nowrap;
+                            transition: 0.3s;
+                            
                             &:hover{
                                 color: gray;
                             }

@@ -9,11 +9,11 @@ export default{
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="hero-about">
+                <div data-aos="fade-right" class="hero-about">
                     <img src="../../public/img/aboutme.JPG" alt="Foto About Me">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div data-aos="fade-left" class="col-lg-6 col-md-6 col-sm-12 bg-copy">
                 <div class="copy">
                     <h1>Kristina Prilipko</h1>
                     <p>Hi there,</p>
@@ -24,13 +24,12 @@ export default{
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/app.scss' as *;
 
 .row{
     .col-lg-6, .col-md-6{
         padding: 0px !important;
-        background-color: rgb(189, 189, 255);
         
         .hero-about{
             img{
@@ -49,6 +48,10 @@ export default{
                 padding: 120px 50px;
             }
         }
+    }
+
+    .bg-copy{
+        background-color: rgb(189, 189, 255);
     }
 }
 

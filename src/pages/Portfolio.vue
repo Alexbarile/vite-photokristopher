@@ -55,7 +55,7 @@ export default{
 
                 <!-- CARD V-FOR -->
 
-                <div v-for="(item, index) in menuItems" :key="index" class="col-lg-4 col-sm-12 p-1">
+                <div v-for="(item, index) in menuItems" :key="index" class="col-lg-4 col-sm-12 p-1" data-aos="fade-up">
 
                     <!-- click su tutta l'immagine -->
 
@@ -77,7 +77,7 @@ export default{
     </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/app.scss' as *;
 
 .row{
@@ -117,6 +117,11 @@ export default{
             background-color: transparent;
             padding: 8px 70px;
             color: white;
+            transition: 0.3s;
+
+            &:hover{
+                box-shadow: 0 0 6px 3px rgb(239, 239, 211);
+            }
         }
     }    
 }

@@ -61,11 +61,11 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="hero-contact">
-                    <!-- <img src="../../public/img/aboutme.JPG" alt="Foto About Me"> -->
+                <div data-aos="fade-right" class="hero-contact">
+                    <img src="../../public/img/aboutme.JPG" alt="Foto About Me">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div data-aos="fade-left" class="col-lg-6 col-md-6 col-sm-12 bg-copy">
                 <div class="copy">
 
                     <!-- FORM -->
@@ -174,7 +174,6 @@ export default {
 .row{
     .col-lg-6, .col-md-6{
         padding: 0px !important;
-        background-color: rgb(189, 189, 255);
         
         .hero-contact{
             img{
@@ -239,6 +238,7 @@ export default {
                 background-color: transparent;
                 padding: 11px 70px;
                 color: white;
+                transition: 0.3s;
                 // border: none;
                 // outline: none;
                 // background-color: royalblue;
@@ -277,6 +277,7 @@ export default {
                 a{
                     text-decoration: none;
                     color: black;
+                    transition: 0.3s;
 
                     &:hover{
                         color: gray;
@@ -290,6 +291,10 @@ export default {
                 padding: 120px 50px;
             }
         }
+    }
+
+    .bg-copy{
+        background-color: rgb(189, 189, 255);
     }
 }
     

@@ -11,9 +11,9 @@
                 <div class="col-12">
                     <div class="hero-img">
                         <div class="hero-text">
-                            <h4 class="pb-4">Photography</h4>
+                            <h4 data-aos="fade-up" class="pb-4">Photography</h4>
                             <router-link :to="{name: 'portfolio'}" class="logo">
-                                <button>SEE</button>
+                                <button data-aos="fade-up">SEE</button>
                             </router-link>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
     </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/app.scss' as *;
 
 main{
@@ -60,6 +60,11 @@ main{
                 background-color: transparent;
                 padding: 8px 70px;
                 color: white;
+                transition: 0.3s;
+
+                &:hover{
+                    box-shadow: 0 0 6px 3px rgb(239, 239, 211);
+                }
             }
         }    
     }

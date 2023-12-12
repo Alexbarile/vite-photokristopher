@@ -34,8 +34,22 @@ footer{
         .col{
             a{
                 color: black;
-                font-size: 30px;
+                font-size: 40px;
+                transition: 0.3s;
+
+                &:hover{
+                    color: gray;
+                }
+
+                i{
+                    transform: scale(1);
+
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
             }
+
         }
     }
 }
