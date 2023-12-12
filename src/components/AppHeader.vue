@@ -85,7 +85,6 @@ export default{
 <style lang="scss" scoped>
 @use '../styles/app.scss' as *;
     header{
-
         .row{
             padding: 10px;
             .col{

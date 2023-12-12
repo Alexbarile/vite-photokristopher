@@ -127,7 +127,7 @@ img {
 }
 
 .grid-wrapper .big:hover{
-    height: 60vh;
+    height: 80vh;
 }
 
 // @media (max-width: 768px) {

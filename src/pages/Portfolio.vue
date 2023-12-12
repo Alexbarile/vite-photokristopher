@@ -108,11 +108,10 @@ export default{
         h3{
             font-size: 30px;
             font-weight: 400;
-            font-family: 'Times New Roman', Times, serif;
+            white-space: nowrap;
         }
 
         button{
-            font-family: 'Times New Roman', Times, serif;
             border: 1px solid white;
             background-color: transparent;
             padding: 8px 70px;

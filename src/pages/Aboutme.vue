@@ -10,7 +10,7 @@ export default{
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div data-aos="fade-right" class="hero-about">
-                    <img src="../../public/img/aboutme.JPG" alt="Foto About Me">
+                    <img src="../../public/img/aboutme.JPG" alt="">
                 </div>
             </div>
             <div data-aos="fade-left" class="col-lg-6 col-md-6 col-sm-12 bg-copy">
@@ -51,7 +51,7 @@ export default{
     }
 
     .bg-copy{
-        background-color: rgb(189, 189, 255);
+        background-color: rgb(226, 226, 226);
     }
 }
 
