@@ -8,12 +8,12 @@ export default{
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="hero-about">
                     <img src="../../public/img/aboutme.JPG" alt="Foto About Me">
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="copy">
                     <h1>Kristina Prilipko</h1>
                     <p>Hi there,</p>
@@ -28,18 +28,26 @@ export default{
 @use '../styles/app.scss' as *;
 
 .row{
-    .col-6{
+    .col-lg-6, .col-md-6{
         padding: 0px !important;
         background-color: rgb(189, 189, 255);
         
         .hero-about{
             img{
                 width: 100%;
+                height: 100%;
             }
         }
 
         .copy{
             padding: 150px 120px;
+        }
+
+        @media (max-width: 992px) {
+
+            .copy{
+                padding: 120px 50px;
+            }
         }
     }
 }

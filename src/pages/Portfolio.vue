@@ -55,7 +55,7 @@ export default{
 
                 <!-- CARD V-FOR -->
 
-                <div v-for="(item, index) in menuItems" :key="index" class="col-4 p-1">
+                <div v-for="(item, index) in menuItems" :key="index" class="col-lg-4 col-sm-12 p-1">
 
                     <!-- click su tutta l'immagine -->
 

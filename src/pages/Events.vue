@@ -244,6 +244,17 @@ img {
     box-shadow: 0 0 6px 3px rgb(239, 239, 211);
 }
 
+.grid-wrapper .square:hover, .tall:hover{
+    height: 40vh;
+}
+
+.grid-wrapper .wide:hover{
+    height: 80vh;
+}
+
+.grid-wrapper .big:hover{
+    height: 60vh;
+}
 
 
 

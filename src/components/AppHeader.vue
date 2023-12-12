@@ -61,7 +61,7 @@ export default{
                             <h1>Wander with Kri</h1>
                         </router-link>
                     </div>
-                    <div class="col d-flex justify-content-end">
+                    <div class="col d-flex justify-content-lg-end justify-content-sm-center">
                         <nav>
                             <ul>
                                 <li v-for="(item, index) in menuItems" :key="index">
@@ -73,11 +73,9 @@ export default{
                                     <router-link :to="{name: item.routeName}" class="list-item">
                                         {{ item.label }}
                                     </router-link>
-
-                                    
                                 </li>
                             </ul>
-                        </nav>    
+                        </nav>
                     </div>
                 </div>  
             </div>
@@ -87,7 +85,6 @@ export default{
 <style lang="scss" scoped>
 @use '../styles/app.scss' as *;
     header{
-    
 
         .row{
             padding: 10px;
@@ -106,16 +103,25 @@ export default{
                     display: flex;
                     list-style-type: none;
                     margin: 0 !important;
+                    padding: 0 !important;
 
                     li{
-                        padding: 20px;
+                        padding: 15px;
                         .list-item{
                             text-decoration: none;
                             color: black;
+                            white-space: nowrap;
                             &:hover{
                                 color: gray;
                             }
                         }
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .logo{
+                        display: flex;
+                        justify-content: center;
                     }
                 }
             }

@@ -60,21 +60,17 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="hero-contact">
                     <!-- <img src="../../public/img/aboutme.JPG" alt="Foto About Me"> -->
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="copy">
 
                     <!-- FORM -->
 
                     <form class="form">
-                        <label>
-                            <input required placeholder="" type="text" class="w-100">
-                            <span>Nome</span>
-                        </label>
                         <label>
                             <input required placeholder="" type="text" class="input">
                             <span>Nome</span>
@@ -176,7 +172,7 @@ export default {
 @use '../styles/app.scss' as *;
 
 .row{
-    .col-6{
+    .col-lg-6, .col-md-6{
         padding: 0px !important;
         background-color: rgb(189, 189, 255);
         
@@ -201,16 +197,16 @@ export default {
             }
     
             .form label .input {
+                border: 1px solid white;
+                background-color: transparent;
+                padding: 11px 10px;
+                color: white;
+                width: 100%;
                 // width: 100%;
                 // padding: 10px 10px 20px 10px;
                 // outline: 0;
                 // border: 1px solid rgba(105, 105, 105, 0.397);
                 // border-radius: 10px;
-
-                border: 1px solid white;
-                background-color: transparent;
-                padding: 11px 70px;
-                color: white;
             }
             
             .form label .input + span {
@@ -239,6 +235,10 @@ export default {
             }
     
             .submit {
+                border: 1px solid white;
+                background-color: transparent;
+                padding: 11px 70px;
+                color: white;
                 // border: none;
                 // outline: none;
                 // background-color: royalblue;
@@ -247,15 +247,12 @@ export default {
                 // color: #fff;
                 // font-size: 16px;
                 // transform: .3s ease;
-
-                border: 1px solid white;
-                background-color: transparent;
-                padding: 11px 70px;
-                color: white;
             }
     
             .submit:hover {
-                background-color: rgb(56, 90, 194);
+                background-color: rgb(245, 244, 244);
+                color: gray;
+                border: 1px solid gray;
             }
     
             @keyframes pulse {
@@ -285,6 +282,12 @@ export default {
                         color: gray;
                     }
                 }
+            }
+        }
+        @media (max-width: 992px) {
+
+            .copy{
+                padding: 120px 50px;
             }
         }
     }

@@ -118,4 +118,22 @@ img {
     box-shadow: 0 0 6px 3px rgb(239, 239, 211);
 }
 
+.grid-wrapper .square:hover, .tall:hover{
+    height: 40vh;
+}
+
+.grid-wrapper .wide:hover{
+    height: 80vh;
+}
+
+.grid-wrapper .big:hover{
+    height: 60vh;
+}
+
+// @media (max-width: 768px) {
+//     .grid-wrapper .tall:hover, .big:hover, .wide:hover, .square:hover{
+//         height: 100vh;
+//     }
+// }
+
 </style>
