@@ -61,7 +61,7 @@ export default{
                             <h1>Wander with Kri</h1>
                         </router-link>
                     </div>
-                    <div class="col d-flex justify-content-lg-end justify-content-sm-center">
+                    <div class="col d-flex justify-content-lg-end justify-content-center">
                         <nav>
                             <ul>
                                 <li v-for="(item, index) in menuItems" :key="index">

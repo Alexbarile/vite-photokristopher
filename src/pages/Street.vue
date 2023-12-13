@@ -108,26 +108,25 @@ img {
 
 // HOVER FILTRO COLORE, INGRADIMENTO FOTO, BOX SHADOW
 
-.grid-wrapper .square, .tall, .wide, .big{
+.grid-wrapper .square img, .tall img, .wide img, .big img{
     transition: 1s;
 }
 
-.grid-wrapper .tall:hover, .big:hover, .wide:hover, .square:hover {
-    // filter: grayscale(100%);
-    scale: 2;
+.grid-wrapper .square:hover img{
+    transform: scale(1.4);
+    height: 50vh;
     box-shadow: 0 0 6px 3px rgb(239, 239, 211);
 }
 
-.grid-wrapper .square:hover, .tall:hover{
-    height: 40vh;
+.grid-wrapper .tall:hover img{
+    transform: scale(1.5);
+    box-shadow: 0 0 6px 3px rgb(239, 239, 211);
 }
 
-.grid-wrapper .wide:hover{
-    height: 80vh;
-}
-
-.grid-wrapper .big:hover{
-    height: 60vh;
+.grid-wrapper .wide:hover img, .big:hover img{
+    transform: scale(1.3);
+    height: 70vh;
+    box-shadow: 0 0 6px 3px rgb(239, 239, 211);
 }
     
 </style>
