@@ -51,7 +51,7 @@ export default{
         }
     },
 
-    // Funzione per far chiudere il menu UL senza premere sulla X, schiacciando anche sullo schermo
+    // Funzione per far chiudere il menu UL senza premere sulla X, schiacciando sullo schermo
 
     mounted() {
         document.addEventListener('click', this.handleClickOutside);

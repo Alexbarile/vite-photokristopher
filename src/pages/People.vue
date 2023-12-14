@@ -111,6 +111,10 @@ img {
 
 .grid-wrapper .square img, .tall img, .wide img, .big img{
     transition: 1s;
+    // width: 100%;
+    // height: 200px;
+    // object-fit: cover;
+    // object-position: top;
 }
 
 .grid-wrapper .square:hover img{

@@ -189,6 +189,97 @@ export default {
         </div> -->
 
 
+        <!-- TYPE 5 (COL 3) -->
+
+
+        <!-- <div class="row">
+            <div class="col">
+
+                <div class="column">
+                    <div class="photo">
+                        <img src="../../public/img/people/DSCF1667-4.JPG" alt="" />
+                    </div>
+                    <div class="photo">
+                        <img src="../../public/img/people/DSCF6374.JPG" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                    <div class="photo">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="photo">
+                        <img src="../../public/img/bars/DSCF6264-2.JPG" alt="" />
+                    </div>
+                    <div class="photo">
+                        <img src="../../public/img/people/DSCF6454.JPG" alt="" />
+                    </div>
+                    <div class="photo">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="photo">
+                        <img src="../../public/img/bars/DSCF6264-2.JPG" alt="" />
+                    </div>
+                    <div class="photo">
+                        <img src="../../public/img/people/DSCF9832-2.JPG" alt="" />
+                    </div>
+                    <div class="photo">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <!-- TYPE 6 (COL 4) -->
+
+
+        <!-- <div class="row">
+            <div class="col">
+
+                <div class="column">
+                    <div class="box">
+                        <img src="../../public/img/people/DSCF1667-4.JPG" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/people/DSCF6374.JPG" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/bars/DSCF6264-2.JPG" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/people/DSCF6454.JPG" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/bars/DSCF6264-2.JPG" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/people/DSCF9832-2.JPG" alt="" />
+                    </div>
+                    <div class="box">
+                        <img src="../../public/img/bars/DSCF8151.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
     </div>
 </template>
 
@@ -258,6 +349,7 @@ img {
 
 // TYPE 1
 
+
 // .square img{
 //     width: 200px;
 // }
@@ -271,6 +363,7 @@ img {
 
 
 // TYPE 2
+
 
 // div#masonry { 
 //   display: flex; 
@@ -301,6 +394,7 @@ img {
 
 
 // TYPE 3
+
 
 // .row{
 //     .col{
@@ -349,6 +443,7 @@ img {
 
 // TYPE 4
 
+
 // .row{
 //     .col{
 
@@ -380,5 +475,86 @@ img {
 //     }
 // }
 
+
+// TYPE 5 (COL 3)
+
+
+// .col{
+//     display: flex;
+//     gap: 20px;
+//     .column{
+//         display: flex;
+//         flex-direction: column;
+//         gap: 20px;
+
+//         .photo img{
+//             width: 100%;
+//             height: 100%;
+//             border-radius: 5px;
+//             object-fit: cover;
+//             transition: 1s;
+
+//             &:hover{
+//                 transform: scale(1.3);
+//                 box-shadow: 0 0 6px 3px rgb(239, 239, 211);
+//             }
+//         }
+//     }
+// }
+
+// @media (max-width: 768px){
+
+//     .col{
+//         flex-direction: column;
+//     }
+// }
+
+
+// TYPE 6 (COL 4)
+
+
+// .col{
+//     .column{
+//         width: 100%;
+//         margin: 20px auto;
+//         columns: 4;
+//         column-gap: 20px;
+
+//         .box{
+//             width: 100%;
+//             margin-bottom: 10px;
+//             break-inside: avoid;
+
+//             img{
+//                 max-width: 100%;
+//                 border-radius: 10px;
+//                 transition: 1s;
+
+//                 &:hover{
+//                     transform: scale(1.3);
+//                     box-shadow: 0 0 6px 3px rgb(239, 239, 211);
+//                 }
+//             }
+//         }
+//     }
+
+//     @media (max-width: 1200px){
+//         .column{
+//             width: calc(100% - 40px);
+//         }
+//     }
+
+//     @media (max-width: 768px){
+//         .column{
+//             columns: 2;
+//         }
+//     }
+
+//     @media (max-width: 480px){
+//         .column{
+//             columns: 1;     
+//         }
+//     }
+// }
     
 </style>
