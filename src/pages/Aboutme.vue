@@ -8,16 +8,25 @@ export default{
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div data-aos="fade-right" class="hero-about">
+            
+            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right">
+                <div class="hero-about">
                     <img src="../../public/img/aboutme.JPG" alt="">
                 </div>
             </div>
-            <div data-aos="fade-left" class="col-lg-6 col-md-6 col-sm-12 bg-copy">
+            <div class="col-lg-6 col-md-6 col-sm-12 bg-copy" data-aos="fade-left">
                 <div class="copy">
                     <h1>Kristina Prilipko</h1>
                     <p>Hi there,</p>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, nemo id deserunt ad modi voluptates reiciendis, et tempore quas odio veritatis voluptatum, dolore eius minus laborum fugiat. Animi, delectus? Pariatur?</p>
+
+                    <form class="form d-none">
+                        <router-link :to="{name: 'thank-you'}" class="text-center">
+                            <button class="submit">
+                                Invia
+                            </button>
+                        </router-link>
+                    </form>
                 </div>
             </div>
         </div>

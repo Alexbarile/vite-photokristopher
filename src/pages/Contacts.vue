@@ -60,12 +60,12 @@ export default {
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div data-aos="fade-right" class="hero-contact">
+            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right">
+                <div class="hero-contact">
                     <img src="../../public/img/aboutme.JPG" alt="">
                 </div>
             </div>
-            <div data-aos="fade-left" class="col-lg-6 col-md-6 col-sm-12 bg-copy">
+            <div class="col-lg-6 col-md-6 col-sm-12 bg-copy" data-aos="fade-left" >
                 <div class="copy">
 
                     <!-- FORM -->
@@ -178,6 +178,7 @@ export default {
         .hero-contact{
             img{
                 width: 100%;
+                height: 100%;
             }
         }
 
@@ -286,7 +287,6 @@ export default {
             }
         }
         @media (max-width: 992px) {
-
             .copy{
                 padding: 120px 50px;
             }

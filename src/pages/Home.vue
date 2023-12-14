@@ -8,7 +8,7 @@
     <main>
         <div class="container-100">
             <div class="row">
-                <div class="col-12 p-0">
+                <div class="col-12 p-0" data-aos="fade-in">
                     <div class="hero-img">
                         <div class="hero-text">
                             <h4 data-aos="fade-up" class="pb-4">Photography</h4>

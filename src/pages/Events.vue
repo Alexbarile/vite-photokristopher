@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" data-aos="zoom-in">
         <div class="row">
             <div class="col">
                 <div class="grid-wrapper">
