@@ -33,6 +33,9 @@ export default {
                     <div class="box">
                         <img src="../../public/img/people/DSCF6492-2.JPG" alt="" />
                     </div>
+                    <div class="box-2">
+                        <img src="../../public/img/people/PHCF7465.JPG" alt="" />
+                    </div>
                     <div class="box">
                         <img src="../../public/img/people/DSCF7420.JPG" alt="" />
                     </div>
@@ -56,9 +59,6 @@ export default {
                     </div>
                     <div class="box">
                         <img src="../../public/img/people/FUJIFILM_X-T30_4160x6240_057895.JPG" alt="" />
-                    </div>
-                    <div class="box">
-                        <img src="../../public/img/people/PHCF7465.JPG" alt="" />
                     </div>
                 </div>
             </div>
@@ -93,6 +93,23 @@ export default {
                 }
             }
         }
+
+        .box-2{
+            width: 100%;
+            margin-bottom: 10px;
+            break-inside: avoid;
+
+            img{
+                max-width: 130%;
+                border-radius: 10px;
+                transition: 1s;
+
+                &:hover{
+                    transform: scale(1.3);
+                    box-shadow: 0 0 6px 3px rgb(239, 239, 211);
+                }
+            }
+        }
     }
 
     @media (max-width: 1200px){
@@ -105,11 +122,19 @@ export default {
         .grid-wrapper{
             columns: 2;
         }
+
+        .box-2 img{
+            width: 100%;
+        }
     }
 
     @media (max-width: 480px){
         .grid-wrapper{
             columns: 1;
+        }
+
+        .box-2 img{
+            width: 100%;
         }
     }
 }
