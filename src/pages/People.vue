@@ -134,7 +134,7 @@ export default {
         }
 
         .box-2 img{
-            width: 100%;
+            // width: 100%;
         }
     }
 }
