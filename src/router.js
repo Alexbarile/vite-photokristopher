@@ -20,7 +20,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
+            path: '/homepage',
             name: 'home',
             component: Home
         },
@@ -30,7 +30,7 @@ const router = createRouter({
             component: Portfolio
         },
         {
-            path: '/aboutme',
+            path: '/about-me',
             name: 'about_me',
             component: Aboutme
         },
@@ -45,7 +45,7 @@ const router = createRouter({
             component: People
         },
         {
-            path: '/hospitality_industry',
+            path: '/hospitality-industry',
             name: 'hospitality',
             component: Hospitality
         },
@@ -65,7 +65,7 @@ const router = createRouter({
             component: Events
         },
         {
-            path: '/street_photography',
+            path: '/street-photography',
             name: 'street',
             component: Street
         },
