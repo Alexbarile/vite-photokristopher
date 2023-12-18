@@ -78,7 +78,7 @@ export default{
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col">
                         <router-link :to="{name: 'home'}" class="logo">
-                            <h1>Wander with Kri</h1>
+                            <img src="../../public/img/logo.png" alt="">
                         </router-link>
                     </div>
                     
@@ -136,11 +136,8 @@ export default{
             .col{
 
                 .logo{
-                    text-decoration: none;
-                    color: black;
-                    h1{
-                        font-size: 25px;
-                        margin: 0 !important;
+                    img{
+                       width: 40%;
                     }
                 }
 
