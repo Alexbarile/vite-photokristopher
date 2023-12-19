@@ -139,7 +139,14 @@ export default{
                     img{
                        width: 40%;
                     }
+
+                    @media (max-width: 768px) {
+                        img{
+                            width: 80%;
+                        }
+                    }
                 }
+
 
                 ul{
                     display: flex;
@@ -242,7 +249,7 @@ export default{
                     }
                     .menu {
                         position: absolute;
-                        top: 12%;
+                        top: 10%;
                         margin-top: 50px;
                         left: 0;
                         flex-direction: column;
