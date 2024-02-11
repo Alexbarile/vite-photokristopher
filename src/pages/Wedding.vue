@@ -10,10 +10,13 @@ export default {
             <div class="col">
                 <div class="grid-wrapper">
                     <div class="box">
+                        <img src="../../public/img/weeding/DSCF1155.jpg" alt="" />
+                    </div>
+                    <div class="box">
                         <img src="../../public/img/weeding/DSCF1133.jpg" alt="" />
                     </div>
                     <div class="box">
-                        <img src="../../public/img/weeding/DSCF1155.jpg" alt="" />
+                        <img src="../../public/img/weeding/IMG_6800.jpg" alt="" />
                     </div>
                     <div class="box">
                         <img src="../../public/img/weeding/DSCF1274.jpg" alt="">
@@ -31,15 +34,18 @@ export default {
                         <img src="../../public/img/weeding/DSCF2407.jpg" alt="" />
                     </div>
                     <div class="box">
-                        <img src="../../public/img/weeding/DSCF2408.jpg" alt="" />
+                        <img src="../../public/img/weeding/DSCF3421.jpg" alt="" />
                     </div>
+                    <!-- <div class="box">
+                        <img src="../../public/img/weeding/DSCF2408.jpg" alt="" />
+                    </div> -->
                     <div class="box">
                         <img src="../../public/img/weeding/DSCF2446.jpg" alt="" />
                     </div>
                     <div class="box">
                         <img src="../../public/img/weeding/DSCF2627.jpg" alt="" />
                     </div>
-                    <div class="box">
+                    <div class="box-3">
                         <img src="../../public/img/weeding/DSCF2752.jpg" alt="" />
                     </div>
                     <div class="box">
@@ -54,8 +60,8 @@ export default {
                     <div class="box">
                         <img src="../../public/img/weeding/DSCF3194.jpg" alt="" />
                     </div>
-                    <div class="box">
-                        <img src="../../public/img/weeding/DSCF3421.jpg" alt="" />
+                    <div class="box-2">
+                        <img src="../../public/img/weeding/IMG_6800.jpg" alt="" />
                     </div>
                     <div class="box">
                         <img src="../../public/img/weeding/DSCF4655.jpg" alt="" />
@@ -73,12 +79,9 @@ export default {
                         <img src="../../public/img/weeding/IMG_6764-2.jpg" alt="" />
                     </div>
                     <div class="box">
-                        <img src="../../public/img/weeding/IMG_6800.jpg" alt="" />
-                    </div>
-                    <div class="box">
                         <img src="../../public/img/weeding/IMG_6836.jpg" alt="" />
                     </div>
-                    <div class="box">
+                    <div class="box-3">
                         <img src="../../public/img/weeding/IMG_6853-1.jpg" alt="" />
                     </div>
                     <div class="box">
@@ -112,7 +115,7 @@ export default {
     .grid-wrapper{
         width: 100%;
         margin: 20px auto;
-        columns: 4;
+        columns: 3;
         column-gap: 10px;
 
         .box{
@@ -131,6 +134,41 @@ export default {
                 }
             }
         }
+
+        .box-2{
+            width: 100%;
+            margin-bottom: 10px;
+            break-inside: avoid;
+
+            img{
+                max-width: 100%;
+                border-radius: 10px;
+                transition: 1s;
+
+                &:hover{
+                    transform: scale(1.3);
+                    box-shadow: 0 0 6px 3px rgb(239, 239, 211);
+                }
+            }
+        }
+
+        .box-3{
+            width: 100%;
+            margin-bottom: 10px;
+            break-inside: avoid;
+
+            img{
+                max-width: 50%;
+                border-radius: 10px;
+                transition: 1s;
+
+                &:hover{
+                    transform: scale(1.3);
+                    box-shadow: 0 0 6px 3px rgb(239, 239, 211);
+                }
+            }
+        }
+
     }
 
     @media (max-width: 1200px){
